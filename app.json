@@ -24,13 +24,16 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.company.studius",
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    }
+      },
+      "package": "com.company.studius"
+    },
+    "newArchEnabled": true
   }
 }
