@@ -18,14 +18,14 @@ export default function Signup() {
     }
 
   return (
-    <LinearGradient colors={[theme.colors.secondarydark, theme.colors.primarydark]} style={{flex: 1}}>
+    <LinearGradient colors={[theme.colors.primarydark, theme.colors.secondarydark]} locations={[0.4, 0.95]} style={{flex: 1}}>
         <SafeAreaView className='flex-1 justify-center items-center'>
             <StatusBar hidden={true}/> 
             <View className='bg-none rounded-3xl w-11/12 p-6 px-8'>
                 <Text className=" color-gray-300 mb-6 font-bold text-3xl">Create Account</Text>
-                <TextInput className='border border-gray-300 rounded-md p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Name' value={name} onChangeText={setName} autoCorrect={false}/>
-                <TextInput className='border border-gray-300 rounded-md p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Email' value={email} onChangeText={setEmail} inputMode='email' autoCorrect={false}/>
-                <TextInput className='border border-gray-300 rounded-md p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry={true}/>
+                <TextInput className='border border-gray-300 rounded-md p-4 color-white mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Name' value={name} onChangeText={setName} autoCorrect={false}/>
+                <TextInput className='border border-gray-300 rounded-md p-4 color-white mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Email' value={email} onChangeText={setEmail} inputMode='email' autoCorrect={false}/>
+                <TextInput className='border border-gray-300 rounded-md p-4 color-white mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry={true}/>
                 <View className='flex flex-row items-center mb-4'>
                   <Switch
                       trackColor={{false: '#666666', true: theme.colors.secondary}}
@@ -43,8 +43,8 @@ export default function Signup() {
                   </View>
                 </View>
                 <View className='flex flex-row items-center'>
-                    <Link href='/' style={{color: theme.colors.primary}}>Terms & Conditions</Link>
-                    <Link href='/login' className='ml-auto' style={{color: theme.colors.primary}}>Login</Link>
+                    <Link href='/' style={{color: theme.colors.secondary}}>Terms & Conditions</Link>
+                    <Link href='/login' className='ml-auto' style={{color: theme.colors.secondary}}>Login</Link>
                 </View>
             </View>
         </SafeAreaView>

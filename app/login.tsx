@@ -9,13 +9,13 @@ import { Link } from 'expo-router';
 export default function Login() {
   const [remembered, setRemembered] = useState(false);
   return (
-    <LinearGradient colors={[theme.colors.secondarydark, theme.colors.primarydark]} style={{flex: 1}}>
+    <LinearGradient colors={[theme.colors.primarydark, theme.colors.secondarydark]} locations={[0.4, 0.95]} style={{flex: 1}}>
         <SafeAreaView className='flex-1 justify-center items-center'>
             <StatusBar hidden={true}/> 
             <View className='bg-none rounded-3xl w-11/12 p-6 px-8'>
                 <Text className=" color-gray-300 mb-6 font-bold text-3xl">Login</Text>
-                <TextInput className='border border-gray-300 rounded-md p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Email' inputMode='email' autoCorrect={false}/>
-                <TextInput className='border border-gray-300 rounded-md p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Password' secureTextEntry={true}/>
+                <TextInput className='border border-gray-300 rounded-md color-white p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Email' inputMode='email' autoCorrect={false}/>
+                <TextInput className='border border-gray-300 rounded-md color-white p-4 mb-6 w-full' placeholderTextColor={'#6b7280'} placeholder='Password' secureTextEntry={true}/>
                 <View className='flex flex-row items-center mb-4'>
                   <Switch
                       trackColor={{false: '#666666', true: theme.colors.secondary}}
@@ -33,8 +33,8 @@ export default function Login() {
                   </View>
                 </View>
                 <View className='flex flex-row items-center'>
-                    <Link href='/' style={{color: theme.colors.primary}}>Forgot Password</Link>
-                    <Link href='/signup' className='ml-auto' style={{color: theme.colors.primary}}>Create Account</Link>
+                    <Link href='/' style={{color: theme.colors.secondary}}>Forgot Password</Link>
+                    <Link href='/signup' className='ml-auto' style={{color: theme.colors.secondary}}>Create Account</Link>
                 </View>
             </View>
         </SafeAreaView>
